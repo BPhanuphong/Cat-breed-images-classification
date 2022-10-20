@@ -39,7 +39,8 @@ There are a total of 775 images divided into 4 classes as follows:
 4. Scottish fold : 195 images
 
 ### Prepare Data
-Data spliting -> Train 80%, Test 10%, Validation 10%
+- `` Resize image shape`` -> 224, 224
+- `` Data spliting`` -> Train 80%, Test 10%, Validation 10%
 
 ![image](https://user-images.githubusercontent.com/80414593/196958239-74da6aee-fd42-45d4-ab7e-124770b51674.png)
 
@@ -78,17 +79,36 @@ The total number of images after we augmented:
 
 
 ## Training and Fine tuning: <a name="finetuning"></a>
+We fine-tuned the pretrained model by adjusting hyperparameters of each models. Once the best hyperapameters has been obtained from the experiment, we will gradually modify the layers on the classifier's part. We evaluate the result using model accuracy on test set.
+Hyperparamters we adjust and range of them:
+- `` Optimizer`` : [Adam]
+- `` Learning Rate`` : [0.0000001, 0.000001, 0.00001, 0.0001, 0.00015, 0.0002, 0.001, 0.0025, 0.004, 0.0045, 0.005, 0.006, 0.007, 0.0075, 0.008, 0.01, 0.1]
+- `` Batch size`` : [1, 60, 64, 100, 120, 128, 136, 150, 186, 200, 256, 300, 500]
+- `` Epoch`` :[15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 35, 40, 50, 100, 150, 200, 250, 300, 400, 500, 550, 600]
+- `` Activation Function`` : [Relu]
+- `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
+- `` Loss Function`` : [Sparse_catergoricL_crossentropy]
+
 
 ## Discussion: <a name="discussion"></a>
 
 ## Conclusion: <a name="conclusion"></a>
 
 ## Reference: <a name="reference"></a>
-### Library
+### GPU
+GPU 0: Tesla T4 (UUID: GPU-0c0e16f8-6133-6dc4-d1b4-843e49281c9e)
 
-### Version
+### Library Version
+Python 3.7.15
+
+NumPy 1.21.6
+
+TensorFlow 2.9.2
+
+sklearn 1.0.2
 
 ### Set Seed
 np.random.seed(1234)
+
 tf.random.set_seed(5678)
 
