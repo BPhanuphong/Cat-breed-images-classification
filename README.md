@@ -30,11 +30,11 @@
 ## Data Set Overview: <a name="dataset"></a>
 This data was collected via pinterest website. Stored each class of images in a separate folder and all images are kept as jpeg format.
 
-![image](https://user-images.githubusercontent.com/80414593/196958981-14128603-77a2-416a-a048-63ef15ff40ae.png)
+![image](https://user-images.githubusercontent.com/80414593/196963734-1461e440-6c55-4321-9e2e-c528bb4be783.png)
 
 There are a total of 775 images divided into 4 classes as follows:
-1. American shorthair : 190 images
-2. British shorthair : 185 images
+1. British shorthair : 185 images
+2. American shorthair : 190 images
 3. Exotic short hair : 205 images
 4. Scottish fold : 195 images
 
@@ -44,20 +44,29 @@ Data spliting -> Train 80%, Test 10%, Validation 10%
 ![image](https://user-images.githubusercontent.com/80414593/196958239-74da6aee-fd42-45d4-ab7e-124770b51674.png)
 
 ## Data Augmentation: <a name="augment"></a>
-We augment 2 time on train set with tensorflow.keras.Sequential with layers as follow:
-1. layers.RandomFlip("horizontal",input_shape=(img_height, img_width, 3))
-2. layers.RandomRotation(0.1)
-3. layers.RandomZoom(0.1)
-4. layers.RandomBrightness(factor=0.3,value_range=(0, 255), seed=64)
+Augmented images will be stored as a new data set. We will augment on train set with 2 medthods as follow:
 
+1. Augment 2 times on train set with tensorflow.keras.Sequential with layers as follow:
+  - layers.RandomFlip("horizontal",input_shape=(img_height, img_width, 3))
+  - layers.RandomRotation(0.1)
+  - layers.RandomZoom(0.1)
+  - layers.RandomBrightness(factor=0.3,value_range=(0, 255), seed=64)
+
+Example of images after augment:
+
+![image](https://user-images.githubusercontent.com/80414593/196961061-5875f4fa-2825-46d8-98f9-fa4c2febe11b.png)
+
+
+2. Hue Augmentation: We augment 1 time on train set to change temperature of image with tf.image.stateless_random_hue(x_train, 0.5, seed)
+
+Example of images after hue augmentation:
+
+![image](https://user-images.githubusercontent.com/80414593/196975525-2386a39e-7cc5-4047-b37b-e62ff725627b.png)
 
 The total number of images after we augmented:
 
 ![image](https://user-images.githubusercontent.com/80414593/196957976-45e6b369-4ca0-46e5-beb9-566c5a9cf825.png)
 
-Example image after augment:
-
-![image](https://user-images.githubusercontent.com/80414593/196961061-5875f4fa-2825-46d8-98f9-fa4c2febe11b.png)
 
 
 ## Convolutional Neural Network BackBones: <a name="bb"></a>
