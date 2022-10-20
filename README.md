@@ -9,23 +9,19 @@
 
 ## Table of Contents:
 1. [Introduction](#introduction)
-2. [Assumption](#assumption)
-3. [Data Set](#dataset)
-4. [Data Augmentation](#augment)
-5. [CNN Backbones](#bb)
-7. [Network Architecture of each CNN](#architecture)
-8. [Training and Fine Tuning](#finetuning)
-9. [Discussion](#discussion)
-10. [Conclusion](#conclusion)
-11. [Reference](#reference)
+2. [Data Set](#dataset)
+3. [Data Augmentation](#augment)
+4. [CNN Backbones](#bb)
+5. [Network Architecture of each CNN](#architecture)
+6. [Training and Fine Tuning](#finetuning)
+7. [Discussion](#discussion)
+8. [Conclusion](#conclusion)
+9. [Reference](#reference)
 
 ## Introduction: <a name="introduction"></a>
 - The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) with CNN models pretrained.
 - There are 4 classes of image prediction goals: american shorthair, british shorthair, exotic short hair and scottish fold. 
 - Selected 3 CNN backbones to fine tuning by adjust hyperparameters and change classifier layer of models with our custom data set.
-
-## Assumption: <a name="assumption"></a>
-
 
 ## Data Set Overview: <a name="dataset"></a>
 This data was collected via pinterest website. Stored each class of images in a separate folder and all images are kept as jpeg format.
@@ -42,7 +38,7 @@ There are a total of 775 images divided into 4 classes as follows:
 - `` Resize image shape`` -> 224, 224
 - `` Data spliting`` -> Train 80%, Test 10%, Validation 10%
 
-![image](https://user-images.githubusercontent.com/80414593/196958239-74da6aee-fd42-45d4-ab7e-124770b51674.png)
+![image](https://user-images.githubusercontent.com/80414593/196987998-8b1f9480-4fe2-43a4-9a09-e1165945c965.png)
 
 ## Data Augmentation: <a name="augment"></a>
 Augmented images will be stored as a new data set. We will augment on train set with 2 medthods as follow:
