@@ -60,7 +60,7 @@ Sample image of each class:
 ![image](https://user-images.githubusercontent.com/80414593/197229829-0eacbfea-8abb-4cfb-9526-3dbc5654a0b0.png)
 
 
-## Data Augmentation: <a name="augment"></a>
+## :mage:  Data Augmentation: <a name="augment"></a>
 After we rescale pixel of all images and split in to 3 set, We do the data augmentation on the trian to improve performance and outcomes of the models by forming new and different examples. In this process augmented images will be stored as a new train dataset. We will augment on train set with 2 medthods as follow:
 
 1. Augment 2 times on train set with tensorflow.keras.Sequential with layers as follow:
@@ -100,13 +100,13 @@ We load the models with imagenet weight, **excluding** the latter part regarding
 
 
 ## Training and Fine-Tuning: <a name="finetuning"></a>
-### Label of classes
+### :label: Label of classes
 - `` Exotic shorthair : 0 ``
 - `` Scottish fold : 1 ``
 - `` American shorthair : 2 ``
 - `` British shorthair : 3 ``
 
-### Strategy Fine-tuning:
+### :mag_right:  Strategy Fine-tuning:
 Individually fine-tuning for each model for the best accuracy.
 
 First, We fine-tuning the pretrained model by *adjusting hyperparameters* of each models. Once the best hyperapameters has been obtained from the experiment, We will *Unfreeze layer* of pre-trained models to train the weights of the top layers. Next We will gradually modify the layers on the *classifier's part*.
@@ -122,7 +122,7 @@ Classifier:
 - `` Dense`` :[256,512,1024]
 - `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 
-### Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
+### 	:crossed_swords:  Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
 :speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
 
 We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes)
@@ -154,12 +154,56 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-Result
+### Mobilenetv3 
+Hyperparameter's fine-tuned
+- `` Optimizer`` : Adam
+- `` Learning Rate`` : 
+- `` Batch size`` : 
+- `` Epoch`` : 
+
+UnFreeze layer -> []
+```
+-  
+-  
+-  
+-  
+```
+Fine-tuned classifier
+```
+- Flatten
+- Dense 
+- Dropout 
+- Dense 4
+```
+
+### VGG16 
+Hyperparameter's fine-tuned
+- `` Optimizer`` : Adam
+- `` Learning Rate`` : 
+- `` Batch size`` : 
+- `` Epoch`` : 
+
+UnFreeze layer -> []
+```
+-  
+-  
+-  
+-  
+```
+Fine-tuned classifier
+```
+- Flatten
+- Dense 
+- Dropout 
+- Dense 4
+```
+
+
 
 ## Discussion: <a name="discussion"></a>
 
 
-## Conclusion: <a name="conclusion"></a>
+## :trophy:  Conclusion: <a name="conclusion"></a>
 
 ## Reference: <a name="reference"></a>
 ### GPU
