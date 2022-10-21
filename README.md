@@ -13,14 +13,14 @@
 3. [Data Augmentation](#augment)
 4. [CNN Backbones](#bb)
 5. [Network Architecture of each CNN](#architecture)
-6. [Training and Fine Tuning](#finetuning)
+6. [Training and Fine-Tuning](#finetuning)
 7. [Discussion](#discussion)
 8. [Conclusion](#conclusion)
 9. [Reference](#reference)
 
 ## Introduction: <a name="introduction"></a>
-- The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) with CNN models pre-trained. By, cat breed images consist of 4 classes of image prediction goals: american shorthair, british shorthair, exotic short hair and scottish fold.
-- The pre-trained models we selected 3 CNN backbones (Resnet50, Mobilenet small, VGG16) to fine tuning by adjusting hyperparameters and changing the classifier layer of models with our custom dataset.
+- The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) by pre-trained CNN models. By, cat breed images consist of 4 classes of image prediction goals: **``American shorthair, British shorthair, Exotic shorthair and Scottish fold``**.
+- The pre-trained models we selected 3 CNN backbones **``(Resnet50, Mobilenet small, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classifier layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
 
 ## Dataset Overview: <a name="dataset"></a>
 This data was collected via pinterest website. Stored each class of images in a separate folder and all images are kept as jpeg format.
@@ -42,7 +42,7 @@ Sample image of each class:
 
 ![image](https://user-images.githubusercontent.com/80414593/196995623-3d604fa3-e930-4b66-b1b1-f77040d755eb.png)
 
-3. Exotic short hair 
+3. Exotic shorthair 
 
 ![image](https://user-images.githubusercontent.com/80414593/196993705-cb5e9f35-3dbe-43ab-acc6-e0ce71d54e33.png)
 
@@ -60,7 +60,7 @@ We will fit model with train set and test set. For validation set is used to eva
 ![image](https://user-images.githubusercontent.com/80414593/196987998-8b1f9480-4fe2-43a4-9a09-e1165945c965.png)
 
 ## Data Augmentation: <a name="augment"></a>
-Augmented images will be stored as a new dataset. We will augment on train set with 2 medthods as follow:
+After we rescale pixel of all images and split in to 3 set, We do the data augmentation on the trian to improve performance and outcomes of the models by forming new and different examples. In this process augmented images will be stored as a new train dataset. We will augment on train set with 2 medthods as follow:
 
 1. Augment 2 times on train set with tensorflow.keras.Sequential with layers as follow:
   - layers.RandomFlip("horizontal",input_shape=(img_height, img_width, 3))
@@ -68,7 +68,7 @@ Augmented images will be stored as a new dataset. We will augment on train set w
   - layers.RandomZoom(0.1)
   - layers.RandomBrightness(factor=0.3,value_range=(0, 255), seed=64)
 
-Example of images after augment:
+Example of images after augment by method 1:
 
 ![image](https://user-images.githubusercontent.com/80414593/196961061-5875f4fa-2825-46d8-98f9-fa4c2febe11b.png)
 
@@ -91,26 +91,34 @@ We load the models with imagenet weight, **excluding** the latter part regarding
 2. Mobilenet small
 3. VGG16
 
+
+![image](https://user-images.githubusercontent.com/80414593/197187459-c813dfba-6fb6-4405-990e-2634d026933e.png)
+
+*Ref: https://keras.io/api/applications/*
+
+
 ## Network Architecture: <a name="architecture"></a>
 
 
-## Training and Fine tuning: <a name="finetuning"></a>
-First, We fine-tuned the pretrained model by adjusting hyperparameters of each models. Once the best hyperapameters has been obtained from the experiment, we will gradually modify the layers on the classifier's part.
+## Training and Fine-Tuning: <a name="finetuning"></a>
+**Strategy Fine-tuning:** 
+Individually fine-tuning for each model for the best accuracy.
 
-Next, We Unfreeze layers of pre-trained modelsWe evaluate the result using model accuracy on test set.
+First, We fine-tuning the pretrained model by *adjusting hyperparameters* of each models. Once the best hyperapameters has been obtained from the experiment, We will *Unfreeze layer* of pre-trained models to train the weights of the top layers. Next We will gradually modify the layers on the *classifier's part*.
+
 Hyperparamters we adjust and range of them:
 - `` Optimizer`` : [Adam]
 - `` Learning Rate`` : [0.0000001, 0.000001, 0.00001, 0.0001, 0.00015, 0.0002, 0.001, 0.0025, 0.004, 0.0045, 0.005, 0.006, 0.007, 0.0075, 0.008, 0.01, 0.1]
 - `` Batch size`` : [1, 60, 64, 100, 120, 128, 136, 150, 186, 200, 256, 300, 500]
 - `` Epoch`` :[15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 30, 31, 32, 33, 35, 40, 50, 100, 150, 200, 250, 300, 400, 500, 550, 600]
 - `` Activation Function`` : [Relu]
-- `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 - `` Loss Function`` : [Sparse_catergoricL_crossentropy]
 
 Classifier:
 - `` Dense`` :[256,512,1024]
-- `` Regularization`` :[Dropout(0.5), Dropout(0.75)]
+- `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 
+### Fine Tuned CNN Model vs Original Pre-Trained CNN Model
 
 ## Discussion: <a name="discussion"></a>
 
@@ -127,7 +135,9 @@ NumPy 1.21.6
 
 TensorFlow 2.9.2
 
-sklearn 1.0.2
+Sklearn 1.0.2
+
+Matplotlib
 
 ### Set Seed
 np.random.seed(1234)
