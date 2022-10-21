@@ -131,7 +131,7 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ![image](https://user-images.githubusercontent.com/80414593/197201125-10d57379-19e2-4296-b771-123bd93af0f3.png)
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
-Result of the fine-tuned 3 models will compare with base model of thier models(*base model: Pre-trained model before fine-tuning*).
+Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*)
 ### Resnet50v2 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
@@ -146,7 +146,7 @@ UnFreeze layer -> [176:189]
 - post_bn 
 - post_relu 
 ```
-Fine tuned classifier
+Fine-tuned classifier
 ```
 - Flatten
 - Dense 512
@@ -179,5 +179,5 @@ Matplotlib 3.2.2
 ### Set Seed
 np.random.seed(1234)
 
-tf.random.set_seed(5678)
+tf.random.set_seed : [5678, 8753, 1947, 2012, 8289, 1238]
 
