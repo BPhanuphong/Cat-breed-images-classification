@@ -111,7 +111,7 @@ Individually fine-tuning for each model for the best accuracy.
 
 First, We fine-tuning the pretrained model by *adjusting hyperparameters* of each models. Once the best hyperapameters has been obtained from the experiment, We will *Unfreeze layer* of pre-trained models to train the weights of the top layers. Next We will gradually modify the layers on the *classifier's part*.
 
-Hyperparamters we adjust and range of them:
+Range of hyperparameters that we adjust :
 - `` Optimizer`` : [Adam]
 - `` Learning Rate`` : [0.0000001, 0.000001, 0.00001, 0.0001, 0.00015, 0.0002, 0.001, 0.0025, 0.004, 0.0045, 0.005, 0.006, 0.007, 0.0075, 0.008, 0.01, 0.1]
 - `` Batch size`` : [1, 60, 64, 100, 120, 128, 136, 150, 186, 200, 256, 300, 500]
