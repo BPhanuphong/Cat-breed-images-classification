@@ -118,7 +118,12 @@ Classifier:
 - `` Dense`` :[256,512,1024]
 - `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 
-### Fine Tuned CNN Model vs Original Pre-Trained CNN Model
+### Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
+We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes)
+### Resnet50
+
+![image](https://user-images.githubusercontent.com/80414593/197201125-10d57379-19e2-4296-b771-123bd93af0f3.png)
+
 
 ## Discussion: <a name="discussion"></a>
 
