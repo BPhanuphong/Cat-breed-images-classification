@@ -107,6 +107,10 @@ Hyperparamters we adjust and range of them:
 - `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 - `` Loss Function`` : [Sparse_catergoricL_crossentropy]
 
+Classifier:
+- `` Dense`` :[256,512,1024]
+- `` Regularization`` :[Dropout(0.5), Dropout(0.75)]
+
 
 ## Discussion: <a name="discussion"></a>
 
