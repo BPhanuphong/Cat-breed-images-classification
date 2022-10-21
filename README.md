@@ -146,7 +146,13 @@ UnFreeze layer -> [176:189]
 - post_bn 
 - post_relu 
 ```
-
+Fine tuned classifier
+```
+- Flatten
+- Dense 512
+- Dropout 0.75
+- Dense 4
+```
 
 ## Discussion: <a name="discussion"></a>
 
