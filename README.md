@@ -18,11 +18,11 @@
 8. [Conclusion](#conclusion)
 9. [Reference](#reference)
 
-## Introduction: <a name="introduction"></a>
+## :round_pushpin: Introduction: <a name="introduction"></a>
 - The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) by pre-trained CNN models. By, cat breed images consist of 4 classes of image prediction goals: **``American shorthair, British shorthair, Exotic shorthair and Scottish fold``**.
 - The pre-trained models we selected 3 CNN backbones **``(Resnet50, Mobilenet small, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
 
-## Dataset Overview: <a name="dataset"></a>
+## :clipboard: Dataset Overview: <a name="dataset"></a>
 This data was collected via pinterest website. Stored each class of images in a separate folder and all images are kept as jpeg format.
 
 ![image](https://user-images.githubusercontent.com/80414593/196963734-1461e440-6c55-4321-9e2e-c528bb4be783.png)
@@ -86,7 +86,7 @@ The total number of images after we augmented:
 
 
 
-## Convolutional Neural Network BackBones: <a name="bb"></a>
+## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
 We load the models with imagenet weight, **excluding** the latter part regarding the classifier
 1. Resnet50 
 2. Mobilenet small
@@ -99,7 +99,7 @@ We load the models with imagenet weight, **excluding** the latter part regarding
 :stars: The image show detail of each pre-trained model, We selected all of the different sized models so that we can compare how each is, when applied to our dataset, whether or not the size of the model affects the accuracy. 
 
 
-## Training and Fine-Tuning: <a name="finetuning"></a>
+## Training and Fine-Tuning :crystal_ball:: <a name="finetuning"></a>
 ### :label: Label of classes
 - `` Exotic shorthair : 0 ``
 - `` Scottish fold : 1 ``
@@ -132,7 +132,7 @@ We compare models that we fine-tuned with their original models, give 4 input to
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
 Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*)
-### Resnet50v2 
+### :dart: Resnet50v2 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 0.0001
@@ -154,7 +154,7 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-### Mobilenetv3 
+### :dart: Mobilenetv3 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 
@@ -176,7 +176,7 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-### VGG16 
+### :dart: VGG16 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 
