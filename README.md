@@ -205,12 +205,18 @@ Result of the fine-tuned 3 models will compare with base model of thier models.(
 ### :crossed_swords: 1. Compare Model: Base Model vs Fine-Tuned Model
 
 ### :dart: Resnet50v2 
+![image](https://user-images.githubusercontent.com/80414593/197335887-292728bf-6b14-4085-98fc-9e2220673c05.png)
+
 ![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
 
 ### :dart: MobileNetv3 
+![image](https://user-images.githubusercontent.com/80414593/197335906-0c4ef8da-c943-44c8-8988-4e535af92bd9.png)
+
 ![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
 
 ### :dart: VGG16 
+![image](https://user-images.githubusercontent.com/80414593/197335917-db9c180c-2e46-45d5-b1cb-c587c5b264df.png)
+
 ![image](https://user-images.githubusercontent.com/80414593/197329727-04c3a3b8-7a15-4137-9fc8-ddca1e462ccc.png)
 
 
@@ -237,17 +243,25 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 ![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
-- 
+![image](https://user-images.githubusercontent.com/80414593/197335852-aed6f2b0-df1c-4b7b-9730-ed592dc3fc39.png)
+- ...
+
+
 
 ### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine Tuned Model
-- 
+- Original pertained model has trained with specific class that our data class not included. On MobileNetV3Small and Vgg16 has predicted black Exotic shorthair as space heaters while Resnet50v2 predicted as Schipperke (Black dog). On all fine tune model can predict correctly on all. breeds cats.
+
+
+
+
+
 
 ## :trophy:  Conclusion: <a name="conclusion"></a>
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 - 
 
 ### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine Tuned Model
-- 
+- Resnet50v2 pre-trained model has a background in knowledge of cats than the other 2 models because the Resnet50v2 pre-trained model predicted the class closest to the cat it predicted the black dog breed, which is also considered a class that looks close to the cat. (These conclusions provide support to the conclusion of topic 1)
 
 
 ## Reference: <a name="reference"></a>
