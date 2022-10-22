@@ -57,8 +57,7 @@ Sample image of each class:
 
 <!--- We will fit model with train set and test set. For validation set is used to evaluate accuracy's model. --->
 
-![image](https://user-images.githubusercontent.com/80414593/197229829-0eacbfea-8abb-4cfb-9526-3dbc5654a0b0.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197320405-00a918ee-5b00-466e-83d5-06c1e3fd59a6.png)
 
 ## :mage:  Data Augmentation: <a name="augment"></a>
 After we rescale pixel of all images and split in to 3 set, We do the data augmentation on the trian to improve performance and outcomes of the models by forming new and different examples. In this process augmented images will be stored as a new train dataset. We will augment on train set with 2 medthods as follow:
@@ -82,8 +81,7 @@ Example of images after hue augmentation:
 
 The total number of images after we augmented:
 
-![image](https://user-images.githubusercontent.com/80414593/196957976-45e6b369-4ca0-46e5-beb9-566c5a9cf825.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197320472-95ae3ffc-a5cd-455e-8965-bc884b7413ce.png)
 
 
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
