@@ -81,8 +81,7 @@ Example of images after hue augmentation:
 
 The total number of images after we augmented:
 
-![image](https://user-images.githubusercontent.com/80414593/197320472-95ae3ffc-a5cd-455e-8965-bc884b7413ce.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197344505-ff4957f1-346b-49a8-91ee-976aa75ef7f7.png)
 
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
 The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifer part by ourself to make classifer fit with our cat dataset. 
@@ -125,7 +124,7 @@ Classifier:
 ![image](https://user-images.githubusercontent.com/80414593/197343049-a957fcee-2fec-4413-bf3b-ec4b1f98a848.png)
 
 ### :dart: Compare hyperparameters of all models: Resnet50v2, MobileNetv3, VGG16
-![image](https://user-images.githubusercontent.com/80414593/197342484-e97b996c-7027-43e1-89c9-e8bdb62c1d6e.png)
+![image](https://user-images.githubusercontent.com/80414593/197344216-f7055e80-b93c-4813-bc7c-18d651eb5fbd.png)
 
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
@@ -174,8 +173,14 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ![image](https://user-images.githubusercontent.com/80414593/197337010-f1c63d42-5676-48a5-9a2e-8b696f062b50.png)
 ![image](https://user-images.githubusercontent.com/80414593/197337023-57ca1c50-afde-4843-bedd-7ee9f640a555.png)
 
+![image](https://user-images.githubusercontent.com/80414593/197344270-1de47094-d125-48da-a068-55ebe397024d.png)
+- Resnet50v2 model and MobileNetv3 model have improved accuracy after fine-tuning and the training time is also increasing.
+- VGG16 model the accuracy is not much better after fine-tuning and the training time is take so long because VGG16 is a sequential model.
 
-- ...
+![image](https://user-images.githubusercontent.com/80414593/197344969-ad8a2be2-ee35-4f4c-b3f6-50e02ef5f89e.png)
+- Resnet50v2 model has the highest accuracy gain compared to other models and has a higher percentage of standard deviation.
+- VGG16 model has a slightly decrease in accuracy.For the standard deviation VGG16 had the lowest increase compared to the other models.
+- All models after fine-tuned will have at least a 40% standard deviation increase.
 
 
 
@@ -199,13 +204,13 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ### Data Source
 - **https://www.pinterest.com/**
 ```
-- Keyword: exotic shorthair cat, Date: 2-6 Octorber 2022
-- Keyword: scottish fold, Date: 2/6 Octorber 2022
-- Keyword: american shorthair, Date: 2/8 Octorber 2022
-- Keyword: Brithish shorthair cat, Date: 8/9/15 Octorber 2022
+- Keyword: exotic shorthair cat, Date: 2-6 October 2022
+- Keyword: scottish fold, Date: 2/6 October 2022
+- Keyword: american shorthair, Date: 2/8 October 2022
+- Keyword: Brithish shorthair cat, Date: 8/9/15 October 2022
 ```
-- https://www.petfinder.com/, Date: 2-6 Octorber 2022
-- https://www.britishcattery.com/, Date: 15 Octorber 2022
+- https://www.petfinder.com/, Date: 2-6 October 2022
+- https://www.britishcattery.com/, Date: 15 October 2022
 
 
 
