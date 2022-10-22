@@ -4,8 +4,6 @@
 -
 -
 
-## Executive Summary:
-
 
 ## :cat2:  Table of Contents:
 1. [Introduction](#introduction)
@@ -205,7 +203,7 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-![image](https://user-images.githubusercontent.com/80414593/197320871-cd937561-5eca-4471-82b1-bb69fca713ed.png)0.86+-wwc
+![image](https://user-images.githubusercontent.com/80414593/197320871-cd937561-5eca-4471-82b1-bb69fca713ed.png)
 
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
