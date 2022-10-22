@@ -1,9 +1,9 @@
 # Cat-Breed-Images-Classification using Pre-Trained CNN Model :smiley_cat:
 ## README-File
 - ``data set`` : A folder that contains all images used for training in the model are separated by the cat's breeds folder.
-- ``resnet50v2_Final.ipynb`` : Final model after fine tuning the Reanet50v2 backbone.
-- ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine tuning the MobileNetv3 backbone. 
-- ``vgg16_Final.ipynb`` : Final model after fine tuning the VGG16 backbone. 
+- ``resnet50v2_Final.ipynb`` : Final model after fine-tuning the Reanet50v2 backbone.
+- ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine-tuning the MobileNetv3 backbone. 
+- ``vgg16_Final.ipynb`` : Final model after fine-tuning the VGG16 backbone. 
 - ``Final Result.xlsx`` : The results of all the fine-tuning experiments.
 
 
@@ -60,7 +60,7 @@ Sample image of each class:
 ![image](https://user-images.githubusercontent.com/80414593/197320405-00a918ee-5b00-466e-83d5-06c1e3fd59a6.png)
 
 ## :mage:  Data Augmentation: <a name="augment"></a>
-After we rescale pixel of all images and split in to 3 set, We do the data augmentation on the trian to improve performance and outcomes of the models by forming new and different examples. In this process augmented images will be stored as a new train dataset. We will augment on train set with 2 medthods as follow:
+After we rescale the pixel of all images and split them into 3 sets, We do the data augmentation on the train to improve the performance and outcomes of the models by forming new and different examples. In this process, augmented images will be stored as a new train dataset. We will augment on train set with 2 methods as follow:
 
 1. Augment 2 times on train set with tensorflow.keras.Sequential with layers as follow:
   - layers.RandomFlip("horizontal",input_shape=(img_height, img_width, 3))
@@ -84,7 +84,8 @@ The total number of images after we augmented:
 ![image](https://user-images.githubusercontent.com/80414593/197344505-ff4957f1-346b-49a8-91ee-976aa75ef7f7.png)
 
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
-The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifer part by ourself to make classifer fit with our cat dataset. 
+The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifier part by ourselves to make a classifier fit with our cat dataset. 
+
 1. Resnet50 
 2. MobileNetv3 small
 3. VGG16
@@ -107,7 +108,7 @@ The data is ready to use, Now we will start pre-trained model part. We load the 
 ### :mag_right:  Strategy Fine-tuning:
 Individually fine-tuning for each model for the best accuracy.
 
-First, We fine-tuning the pretrained model by *adjusting hyperparameters* of each models. Once the best hyperapameters has been obtained from the experiment, We will *Unfreeze layer* of pre-trained models to train the weights of the top layers. Next We will gradually modify the layers on the *classifier's part*.
+First, We fine-tuned the pre-trained model by *adjusting the hyperparameters* of each model. Once the best hyperparameters have been obtained from the experiment, We will *Unfreeze the layer* of pre-trained models to train the weights of the top layers. Next, We will gradually modify the layers on the *classifier's part*.
 
 Range of hyperparameters that we adjust :
 - `` Optimizer`` : [Adam]
@@ -128,9 +129,9 @@ Classifier:
 
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
-Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
+The result of the fine-tuned 3 models will compare with the base model of their models. (*base model: Pre-trained model before fine-tuning*) 
 
-*Note:* The results of the models to compare the performance were obtained by running the models with 6 different initial weight ([random seed](#seed)), Then show the result in the form of MEAN+-SD.
+*Note:* The results of the models to compare the performance were obtained by running the models with 6 different initial weights ([random seed](#seed)), Then showing the result in the form of MEAN+-SD.
 
 ### :crossed_swords: 1. Compare Model: Base Model vs Fine-Tuned Model
 
@@ -148,7 +149,7 @@ Result of the fine-tuned 3 models will compare with base model of thier models.(
 
 
 
-### 	:crossed_swords: 2.  Compare Model: Original Pre-Trained CNN Model vs Fine Tuned Model
+### 	:crossed_swords: 2.  Compare Model: Original Pre-Trained CNN Model vs Fine-Tuned Model
 :speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
 
 We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
@@ -171,19 +172,45 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 ![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
 
+---
+<!--- 1 --->
 ![image](https://user-images.githubusercontent.com/80414593/197344270-1de47094-d125-48da-a068-55ebe397024d.png)
 - Resnet50v2 model and MobileNetv3 model have improved accuracy after fine-tuning and the training time is also increasing.
 - VGG16 model the accuracy is not much better after fine-tuning and the training time is take so long because VGG16 is a sequential model.
-
+---
+<!--- 2 --->
 ![image](https://user-images.githubusercontent.com/80414593/197344969-ad8a2be2-ee35-4f4c-b3f6-50e02ef5f89e.png)
 - Resnet50v2 model has the highest accuracy gain compared to other models and has a higher percentage of standard deviation.
 - VGG16 model has a slightly decrease in accuracy.For the standard deviation VGG16 had the lowest increase compared to the other models.
 - All models after fine-tuned will have at least a 40% standard deviation increase.
+---
+<!--- 3 --->
+![image](https://user-images.githubusercontent.com/80414593/197345510-a7fdb07e-debd-4f40-8592-1d2605d7dec9.png)
+- The percentage increase of training time in Resnet50v2 is the lowest but training time of Resnet50v2 is the most swinging.
+- As for MobileNetv3, the training time is less swinging compared to the other two models.
+---
+<!--- 4 --->
+![image](https://user-images.githubusercontent.com/80414593/197345904-3fe24f43-43a9-4aee-a1a7-1c0eb61c603a.png)
+
+---
+<!--- 5 --->
+![image](https://user-images.githubusercontent.com/80414593/197346194-a9a27ed7-14d2-4cad-8d7e-7040b28838ca.png)
+
+---
+<!--- 6 --->
+![image](https://user-images.githubusercontent.com/80414593/197346095-90dc058d-d1fd-46d5-87df-d6d433d2a428.png)
+
+From our study and experiment, we found that factors affecting model results may compose of
+- The proportion of features extractor of the original model
+- Model structure.
+- Layer and parameter that add to the model.
+Moreover from information from this experiment, we assume that the reason why Resnet50V2 gives the best result from this experiment is that we use only the feature extractor of each backbone to connect with classifiers that we build by ourselves and due to the high proportion in feature extractor in ResNet50v2 Model so it gives us the better result that other 2 model.
+Furthermore, due to the lowest proportion of feature extractor of VGG16 Model and the classifier that we add to make the whole parameter smaller than the original one, these will cause the lowest result and performance of its fine-tuned model compared with the other 2 models. However, if we have a chance to do more experiments and studies, we will get more evidence to support or refute these assumptions.
 
 
 
-### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine Tuned Model
-- Original pertained model has trained with specific class that our data class not included. On MobileNetV3Small and Vgg16 has predicted black Exotic shorthair as space heaters while Resnet50v2 predicted as Schipperke (Black dog). On all fine tune model can predict correctly on all. breeds cats.
+### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine-Tuned Model
+- Original pertained model has trained with specific class that our data class not included. On MobileNetV3Small and Vgg16 has predicted black Exotic shorthair as space heaters while Resnet50v2 predicted as Schipperke (Black dog). On all fine-tune model can predict correctly on all. breeds cats.
 
 
 
@@ -194,7 +221,7 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 - 
 
-### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine Tuned Model
+### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine-Tuned Model
 - Resnet50v2 pre-trained model has a background in knowledge of cats than the other 2 models because the Resnet50v2 pre-trained model predicted the class closest to the cat it predicted the black dog breed, which is also considered a class that looks close to the cat. (These conclusions provide support to the conclusion of topic 1)
 
 
