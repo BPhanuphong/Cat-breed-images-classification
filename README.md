@@ -87,7 +87,7 @@ The total number of images after we augmented:
 
 
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
-We load the models with imagenet weight, **excluding** the latter part regarding the classifier
+The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifer part by ourself to make classifer fit with our cat dataset. 
 1. Resnet50 
 2. Mobilenet small
 3. VGG16
