@@ -1,8 +1,8 @@
 # Cat-Breed-Images-Classification using Pre-Trained CNN Model :smiley_cat:
 ## README-File
--
--
--
+- 
+- ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine tuning the MobileNetv3 backbone. 
+- ``vgg16_Final.ipynb`` : Final model after fine tuning the VGG16 backbone. 
 
 
 ## :cat2:  Table of Contents:
@@ -85,7 +85,7 @@ The total number of images after we augmented:
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
 The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifer part by ourself to make classifer fit with our cat dataset. 
 1. Resnet50 
-2. Mobilenet small
+2. MobileNetv3 small
 3. VGG16
 
 ![image](https://user-images.githubusercontent.com/80414593/197187459-c813dfba-6fb6-4405-990e-2634d026933e.png)
