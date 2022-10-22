@@ -152,7 +152,7 @@ The result of the fine-tuned 3 models will compare with the base model of their 
 ### 	:crossed_swords: 2.  Compare Model: Original Pre-Trained CNN Model vs Fine-Tuned Model
 :speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
 
-We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
+We compare models that we fine-tuned with their original models, and give 4 inputs to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
 
 ### :dart: Resnet50v2
 ![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
@@ -191,8 +191,9 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ---
 <!--- 4 --->
 ![image](https://user-images.githubusercontent.com/80414593/197345904-3fe24f43-43a9-4aee-a1a7-1c0eb61c603a.png)
-- Resnet50V2 has the most total parameters compared to others because ResNet50v2 has the most feature extractors. and when we connect to the classifier layer With 70 million parameters, this is one of the reasons why Resnet50V2 is the most accurate model.
-- VGG16 has the most practice time. But the parameters are less than Resnet50V2. Our assumptions about this may be due to a model architecture that slows training based on Keras training schedules.
+- Resnet50V2 has the most all parameters compared to others because ResNet50v2 has the most feature extractors. And when we connect to the classifier layer we get 70 million parameters. This is one of the reasons why the Resnet50V2 is the most accurate.
+
+- VGG16 has the most training time. But the parameters are less than Resnet50V2. Our assumptions about this may be due to a model architecture that slows training based on Keras training tables.
 
 ---
 <!--- 5 --->
