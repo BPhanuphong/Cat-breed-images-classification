@@ -1,8 +1,10 @@
 # Cat-Breed-Images-Classification using Pre-Trained CNN Model :smiley_cat:
 ## README-File
-- 
+- ``Data_set`` : All images used for training in the model, are separated by cat breed folder.
+- ``resnet50v2_Final.ipynb`` : Final model after fine tuning the Reanet50v2 backbone.
 - ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine tuning the MobileNetv3 backbone. 
 - ``vgg16_Final.ipynb`` : Final model after fine tuning the VGG16 backbone. 
+- ``experiment`` : The results of all the fine-tuning experiments.*************************************
 
 
 ## :cat2:  Table of Contents:
@@ -177,7 +179,10 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 ![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
-![image](https://user-images.githubusercontent.com/80414593/197335852-aed6f2b0-df1c-4b7b-9730-ed592dc3fc39.png)
+![image](https://user-images.githubusercontent.com/80414593/197336442-97408b54-df95-4453-9310-a117287ac179.png)
+![image](https://user-images.githubusercontent.com/80414593/197336458-648c31f9-c775-47d6-a6d4-ced6b53d44ef.png)
+
+
 - ...
 
 
