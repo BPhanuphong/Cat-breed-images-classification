@@ -104,7 +104,7 @@ The data is ready to use, Now we will start pre-trained model part. We load the 
 - `` Scottish fold : 1 ``
 - `` American shorthair : 2 ``
 - `` British shorthair : 3 ``
-- 
+
 ### :mag_right:  Strategy Fine-tuning:
 Individually fine-tuning for each model for the best accuracy.
 
@@ -191,6 +191,8 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ---
 <!--- 4 --->
 ![image](https://user-images.githubusercontent.com/80414593/197345904-3fe24f43-43a9-4aee-a1a7-1c0eb61c603a.png)
+- Resnet50V2 has the most total parameters compared to others because ResNet50v2 has the most feature extractors. and when we connect to the classifier layer With 70 million parameters, this is one of the reasons why Resnet50V2 is the most accurate model.
+- VGG16 has the most practice time. But the parameters are less than Resnet50V2. Our assumptions about this may be due to a model architecture that slows training based on Keras training schedules.
 
 ---
 <!--- 5 --->
