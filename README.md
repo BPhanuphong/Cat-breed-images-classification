@@ -112,35 +112,10 @@ Classifier:
 - `` Dense`` :[256,512,1024]
 - `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 
-### 	:crossed_swords:  Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
-:speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
-
-We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
+### Model Architecture after Fine-Tuning
+![image](https://user-images.githubusercontent.com/80414593/197326419-08cbaaa5-be8d-49bc-9365-777fc8044865.png)
 
 ### Resnet50v2
-![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
-
-### MobileNetv3
-![image](https://user-images.githubusercontent.com/80414593/197328657-603822fa-6f85-45a0-a50e-772a0c8e6768.png)
-
-
-### VGG16
-![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
-
-
-## :triangular_flag_on_post: Result<a name="result"></a>
-Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
-
-*Note:* The results of the models to compare the performance were obtained by running the models with 6 different initial weight ([random seed](#seed)), Then show the result in the form of MEAN+-SD.
-
-
-### :label: Label of classes
-- `` Exotic shorthair : 0 ``
-- `` Scottish fold : 1 ``
-- `` American shorthair : 2 ``
-- `` British shorthair : 3 ``
-
-### :dart: Resnet50v2 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 0.0001
@@ -161,10 +136,8 @@ Fine-tuned classifier
 - Dropout 0.75
 - Dense 4
 ```
-![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
 
-
-### :dart: MobileNetv3 
+### MobileNetv3
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 0.001
@@ -186,10 +159,7 @@ Fine-tuned classifier
 - Dropout 0.5
 - Dense 4
 ```
-
-![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
-
-### :dart: VGG16 
+### VGG16
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 0.0001
@@ -215,11 +185,47 @@ Fine-tuned classifier
 - Dropout 0.5
 - Dense 4
 ```
+
+
+## :triangular_flag_on_post: Result<a name="result"></a>
+Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
+
+*Note:* The results of the models to compare the performance were obtained by running the models with 6 different initial weight ([random seed](#seed)), Then show the result in the form of MEAN+-SD.
+
+
+### :label: Label of classes
+- `` Exotic shorthair : 0 ``
+- `` Scottish fold : 1 ``
+- `` American shorthair : 2 ``
+- `` British shorthair : 3 ``
+
+### :dart: Resnet50v2 
+![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
+
+
+### :dart: MobileNetv3 
+![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
+
+### :dart: VGG16 
 ![image](https://user-images.githubusercontent.com/80414593/197329727-04c3a3b8-7a15-4137-9fc8-ddca1e462ccc.png)
 
 
-### Model Architecture after Fine-Tuning
-![image](https://user-images.githubusercontent.com/80414593/197326419-08cbaaa5-be8d-49bc-9365-777fc8044865.png)
+
+### 	:crossed_swords:  Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
+:speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
+
+We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
+
+### Resnet50v2
+![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
+
+### MobileNetv3
+![image](https://user-images.githubusercontent.com/80414593/197328657-603822fa-6f85-45a0-a50e-772a0c8e6768.png)
+
+
+### VGG16
+![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
+
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 
