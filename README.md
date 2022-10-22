@@ -122,18 +122,10 @@ Classifier:
 - `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 
 ### Model Architecture after Fine-Tuning
-![image](https://user-images.githubusercontent.com/80414593/197326419-08cbaaa5-be8d-49bc-9365-777fc8044865.png)
+![image](https://user-images.githubusercontent.com/80414593/197343049-a957fcee-2fec-4413-bf3b-ec4b1f98a848.png)
 
-### :dart: Resnet50v2
-![image](https://user-images.githubusercontent.com/80414593/197335887-292728bf-6b14-4085-98fc-9e2220673c05.png)
-
-
-### :dart: MobileNetv3
-![image](https://user-images.githubusercontent.com/80414593/197335906-0c4ef8da-c943-44c8-8988-4e535af92bd9.png)
-
-### :dart: VGG16
-![image](https://user-images.githubusercontent.com/80414593/197335917-db9c180c-2e46-45d5-b1cb-c587c5b264df.png)
-
+### :dart: Compare hyperparameters of all models: Resnet50v2, MobileNetv3, VGG16
+![image](https://user-images.githubusercontent.com/80414593/197342484-e97b996c-7027-43e1-89c9-e8bdb62c1d6e.png)
 
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
