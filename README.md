@@ -1,4 +1,4 @@
-# Cat-breed-images-classification :smiley_cat:
+# Cat-Breed-Images-Classification using Pre-Trained CNN Model :smiley_cat:
 ## README-File
 -
 -
@@ -152,7 +152,7 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-### :dart: Mobilenetv3 
+### :dart: MobileNetv3 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
 - `` Learning Rate`` : 0.001
@@ -174,6 +174,9 @@ Fine-tuned classifier
 - Dropout 0.5
 - Dense 4
 ```
+
+![image](https://user-images.githubusercontent.com/80414593/197320994-59546c68-1168-4418-8909-2bd8bcd5ba0e.png)
+
 
 ### :dart: VGG16 
 Hyperparameter's fine-tuned
@@ -202,11 +205,12 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-![image](https://user-images.githubusercontent.com/80414593/197320252-eb6b6f1a-4c55-4f30-a5f5-cd06f6ca3a4a.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197320871-cd937561-5eca-4471-82b1-bb69fca713ed.png)0.86+-wwc
 
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
+
+![image](https://user-images.githubusercontent.com/80414593/197321061-f2df93b5-4af5-482a-8d27-0765dd1ddac7.png)
 
 
 ## :trophy:  Conclusion: <a name="conclusion"></a>
