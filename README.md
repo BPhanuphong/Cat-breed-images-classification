@@ -121,6 +121,8 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
 
 ### MobileNetv3
+![image](https://user-images.githubusercontent.com/80414593/197328657-603822fa-6f85-45a0-a50e-772a0c8e6768.png)
+
 
 ### VGG16
 ![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
@@ -159,6 +161,8 @@ Fine-tuned classifier
 - Dropout 0.75
 - Dense 4
 ```
+![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
+
 
 ### :dart: MobileNetv3 
 Hyperparameter's fine-tuned
@@ -183,8 +187,7 @@ Fine-tuned classifier
 - Dense 4
 ```
 
-![image](https://user-images.githubusercontent.com/80414593/197320994-59546c68-1168-4418-8909-2bd8bcd5ba0e.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
 
 ### :dart: VGG16 
 Hyperparameter's fine-tuned
@@ -212,17 +215,33 @@ Fine-tuned classifier
 - Dropout 0.5
 - Dense 4
 ```
+![image](https://user-images.githubusercontent.com/80414593/197329727-04c3a3b8-7a15-4137-9fc8-ddca1e462ccc.png)
 
-![image](https://user-images.githubusercontent.com/80414593/197320871-cd937561-5eca-4471-82b1-bb69fca713ed.png)
 
 ### Model Architecture after Fine-Tuning
 ![image](https://user-images.githubusercontent.com/80414593/197326419-08cbaaa5-be8d-49bc-9365-777fc8044865.png)
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 
+![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
+
 ## :trophy:  Conclusion: <a name="conclusion"></a>
 
 ## Reference: <a name="reference"></a>
+### Data Source
+- **https://www.pinterest.com/**
+```
+- Keyword: exotic shorthair cat, Date: 2-6 Octorber 2022
+- Keyword: scottish fold, Date: 2/6 Octorber 2022
+- Keyword: american shorthair, Date: 2/8 Octorber 2022
+- Keyword: Brithish shorthair cat, Date: 8/9/15 Octorber 2022
+```
+- https://www.petfinder.com/, Date: 2-6 Octorber 2022
+- https://www.britishcattery.com/, Date: 15 Octorber 2022
+
+
+
+
 ### GPU
 - GPU 0: Tesla T4 (UUID: GPU-0c0e16f8-6133-6dc4-d1b4-843e49281c9e)
 
