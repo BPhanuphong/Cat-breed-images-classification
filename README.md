@@ -84,15 +84,14 @@ The total number of images after we augmented:
 ![image](https://user-images.githubusercontent.com/80414593/197344505-ff4957f1-346b-49a8-91ee-976aa75ef7f7.png)
 
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
-The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifier part by ourselves to make a classifier fit with our cat dataset. 
-
+The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifier part by ourselves to make a classifier fit with our cat dataset.  <a name="kerastable"></a>
 1. Resnet50v2
 2. MobileNetv3Small
 3. VGG16
 
 ![image](https://user-images.githubusercontent.com/80414593/197187459-c813dfba-6fb6-4405-990e-2634d026933e.png)
 
-*Ref: https://keras.io/api/applications/* <a name="kerastable"></a>
+*Ref: https://keras.io/api/applications/*
 
 :stars: The image show detail of each pre-trained model, We selected all of the different sized models so that we can compare how each is, when applied to our dataset, whether or not the size of the model affects the accuracy. 
 
@@ -228,6 +227,10 @@ Furthermore, due to the lowest proportion of feature extractor of the
 - Resnet50v2 pre-trained model has a background in knowledge of cats and has a better extractor than the other 2 models because the Resnet50v2 pre-trained model predicted the class closest to the cat it predicted the black dog breed, which is also considered a class that looks close to the cat. (These conclusions provide support to the conclusion of topic 1)
 
 ## Reference: <a name="reference"></a>
+- https://keras.io/api/applications/
+- https://www.tensorflow.org/tutorials/images/transfer_learning#use_data_augmentation
+
+
 ### Data Source
 - **https://www.pinterest.com/**
 ```
