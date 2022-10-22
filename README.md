@@ -158,9 +158,7 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 ### :dart: VGG16
 ![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
 
-
-
-
+When predicting from the original version we can see that MobileNetv3Small and VGG16 cannot classify the Exotic shorthair as a cat, but rather as a space heater. This may be because the feature extractor of both models are not good as feature extractor of the Resnet50v2. Although the Resnet50v2 is classified as a black-haired Schipperke, a dog of the same color, However Resnet50v2 did not predict that it would be a cat.
 
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
@@ -198,7 +196,9 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 
 
 ### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine-Tuned Model
-- Original pertained model has trained with specific class that our data class not included. On MobileNetV3Small and Vgg16 has predicted black Exotic shorthair as space heaters while Resnet50v2 predicted as Schipperke (Black dog). On all fine-tune model can predict correctly on all. breeds cats.
+![image](https://user-images.githubusercontent.com/80414593/197348589-59d4a77f-25f3-4d8c-87da-e5f69d5948a7.png)
+
+- Original pertained model has trained with specific class that our data class not included. On MobileNetV3Small and Vgg16 has predicted black Exotic shorthair as space heaters while Resnet50v2 predicted as Schipperke (Black dog). On all fine-tune model can predict correctly on all breeds cats.
 
 
 
@@ -216,13 +216,13 @@ From our study and experiment, we found that factors affecting model results may
 - The proportion of features extractor of the original model
 - Model structure.
 - Layer and parameter that add to the model.
+
 Moreover, from information from this experiment, we assume that the reason why Resnet50V2 gives the best result is that we use only the feature extractor of each backbone to connect with classifiers that we build by ourselves. Therefore, the high proportion of feature extractors in the ResNet50v2 Model gives us a better result than the other two models.
 Furthermore, due to the lowest proportion of feature extractor of the 
 
 
 ### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine-Tuned Model
-- Resnet50v2 pre-trained model has a background in knowledge of cats than the other 2 models because the Resnet50v2 pre-trained model predicted the class closest to the cat it predicted the black dog breed, which is also considered a class that looks close to the cat. (These conclusions provide support to the conclusion of topic 1)
-
+- Resnet50v2 pre-trained model has a background in knowledge of cats and has a better extractor than the other 2 models because the Resnet50v2 pre-trained model predicted the class closest to the cat it predicted the black dog breed, which is also considered a class that looks close to the cat. (These conclusions provide support to the conclusion of topic 1)
 
 ## Reference: <a name="reference"></a>
 ### Data Source
