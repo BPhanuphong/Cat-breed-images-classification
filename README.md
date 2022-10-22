@@ -122,11 +122,10 @@ Classifier:
 - `` Regularization`` :[Dropout(0.5), Dropout(0.75), Dropout(0.85)]
 
 ### Model Architecture after Fine-Tuning
-![image](https://user-images.githubusercontent.com/80414593/197343049-a957fcee-2fec-4413-bf3b-ec4b1f98a848.png)
+![image](https://user-images.githubusercontent.com/80414593/197347766-3808f791-3147-491d-837d-0a6f41b1424c.png)
 
 ### :dart: Compare hyperparameters of all models: Resnet50v2, MobileNetv3Small, VGG16
-![image](https://user-images.githubusercontent.com/80414593/197344216-f7055e80-b93c-4813-bc7c-18d651eb5fbd.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197347560-20daa50b-687c-4648-a0dc-4a115683976f.png)
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
 The result of the fine-tuned 3 models will compare with the base model of their models. (*base model: Pre-trained model before fine-tuning*) 
@@ -136,17 +135,13 @@ The result of the fine-tuned 3 models will compare with the base model of their 
 ### :crossed_swords: 1. Compare Model: Base Model vs Fine-Tuned Model
 
 ### :dart: Resnet50v2 
-
-![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
+![image](https://user-images.githubusercontent.com/80414593/197347444-ddd5823e-47ae-4482-b56b-9069f6017a7e.png)
 
 ### :dart: MobileNetv3Small 
-
-![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
+![image](https://user-images.githubusercontent.com/80414593/197347463-93dc02fb-faa5-41d4-b8f1-3bdc9e08d42b.png)
 
 ### :dart: VGG16 
-
-![image](https://user-images.githubusercontent.com/80414593/197329727-04c3a3b8-7a15-4137-9fc8-ddca1e462ccc.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197347487-31775b7a-7d85-4715-b60d-64cfaa617ed4.png)
 
 
 ### 	:crossed_swords: 2.  Compare Model: Original Pre-Trained CNN Model vs Fine-Tuned Model
@@ -169,8 +164,8 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
-### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
-![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
+### 1. Base Model (before fine-tuning) vs Fine-Tuned Model
+![image](https://user-images.githubusercontent.com/80414593/197347409-7d1d3d35-5531-4954-8854-932173775e0f.png)
 
 ---
 <!--- 1 --->
@@ -198,17 +193,7 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 ---
 <!--- 5 --->
 ![image](https://user-images.githubusercontent.com/80414593/197346194-a9a27ed7-14d2-4cad-8d7e-7040b28838ca.png)
-
----
-<!--- 6 --->
-![image](https://user-images.githubusercontent.com/80414593/197346095-90dc058d-d1fd-46d5-87df-d6d433d2a428.png)
-
-From our study and experiment, we found that factors affecting model results may compose of
-- The proportion of features extractor of the original model
-- Model structure.
-- Layer and parameter that add to the model.
-Moreover from information from this experiment, we assume that the reason why Resnet50V2 gives the best result from this experiment is that we use only the feature extractor of each backbone to connect with classifiers that we build by ourselves and due to the high proportion in feature extractor in ResNet50v2 Model so it gives us the better result that other 2 model.
-Furthermore, due to the lowest proportion of feature extractor of VGG16 Model and the classifier that we add to make the whole parameter smaller than the original one, these will cause the lowest result and performance of its fine-tuned model compared with the other 2 models. However, if we have a chance to do more experiments and studies, we will get more evidence to support or refute these assumptions.
+- The base Model, ResNet50V2, has the best accuracy in the F1 score of classes 2 and 3, while MobileNetV3 has the best accuracy in the F1 score of classes 0 and 1. However, after we tuned the model, ResNet50V2 has the best accuracy for all class while VGG16 have the lowest accuracy for all classes.
 
 
 
@@ -222,7 +207,18 @@ Furthermore, due to the lowest proportion of feature extractor of VGG16 Model an
 
 ## :trophy:  Conclusion: <a name="conclusion"></a>
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
-- 
+<!--- 6 --->
+![image](https://user-images.githubusercontent.com/80414593/197346095-90dc058d-d1fd-46d5-87df-d6d433d2a428.png)
+
+- To conclude our experiment, ResNet50V2 is the best performer and result provided among these three models, however; this fine-tuned model also has a high proportion of standards deviations increase from the base model in terms of accuracy and training time compared with MobileNetV3 and VGG16.
+
+From our study and experiment, we found that factors affecting model results may compose of
+- The proportion of features extractor of the original model
+- Model structure.
+- Layer and parameter that add to the model.
+Moreover, from information from this experiment, we assume that the reason why Resnet50V2 gives the best result is that we use only the feature extractor of each backbone to connect with classifiers that we build by ourselves. Therefore, the high proportion of feature extractors in the ResNet50v2 Model gives us a better result than the other two models.
+Furthermore, due to the lowest proportion of feature extractor of the 
+
 
 ### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine-Tuned Model
 - Resnet50v2 pre-trained model has a background in knowledge of cats than the other 2 models because the Resnet50v2 pre-trained model predicted the class closest to the cat it predicted the black dog breed, which is also considered a class that looks close to the cat. (These conclusions provide support to the conclusion of topic 1)
