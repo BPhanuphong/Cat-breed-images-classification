@@ -68,14 +68,14 @@ After we rescale pixel of all images and split in to 3 set, We do the data augme
 
 Example of images after augment by method 1:
 
-![image](https://user-images.githubusercontent.com/80414593/196961061-5875f4fa-2825-46d8-98f9-fa4c2febe11b.png)
-
+![image](https://user-images.githubusercontent.com/80414593/197326555-c6ba742d-5647-4be7-8be5-c50775b75941.png)
 
 2. Hue Augmentation: We augment 1 time on train set to change temperature of image with tf.image.stateless_random_hue(x_train, 0.5, seed)
 
 Example of images after hue augmentation:
 
-![image](https://user-images.githubusercontent.com/80414593/196975525-2386a39e-7cc5-4047-b37b-e62ff725627b.png)
+![image](https://user-images.githubusercontent.com/80414593/197326485-d1337da5-7a68-41f4-ad4a-8251156d5161.png)
+
 
 The total number of images after we augmented:
 
@@ -115,10 +115,16 @@ Classifier:
 ### 	:crossed_swords:  Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
 :speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
 
-We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes)
-### Resnet50
+We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
 
-![image](https://user-images.githubusercontent.com/80414593/197201125-10d57379-19e2-4296-b771-123bd93af0f3.png)
+### Resnet50v2
+![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
+
+### MobileNetv3
+
+### VGG16
+![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
+
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
 Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
@@ -209,8 +215,8 @@ Fine-tuned classifier
 
 ![image](https://user-images.githubusercontent.com/80414593/197320871-cd937561-5eca-4471-82b1-bb69fca713ed.png)
 
-### Model Architecture after Fine-tuning
-![image](https://user-images.githubusercontent.com/80414593/197325198-e1719129-86a9-4d2e-9924-19faf268167b.png)
+### Model Architecture after Fine-Tuning
+![image](https://user-images.githubusercontent.com/80414593/197326419-08cbaaa5-be8d-49bc-9365-777fc8044865.png)
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 
@@ -231,7 +237,7 @@ Fine-tuned classifier
 - np.random.seed(1234)
 - tf.random.set_seed<a name="seed"></a> : [5678, 8753, 1947, 2012, 8289, 1238]
 
-### Group member
+### Group Member
 | Member        | % Contribution | Main Responsibility |
 | :------------ |:--------------:|--------------------:|
 | 6310422101    |       25%     | Collect data, Fine-tune Mobilenet model       |
