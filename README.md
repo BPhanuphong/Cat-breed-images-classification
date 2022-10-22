@@ -209,11 +209,10 @@ Fine-tuned classifier
 
 ![image](https://user-images.githubusercontent.com/80414593/197320871-cd937561-5eca-4471-82b1-bb69fca713ed.png)
 
+### Model Architecture after Fine-tuning
+![image](https://user-images.githubusercontent.com/80414593/197325198-e1719129-86a9-4d2e-9924-19faf268167b.png)
 
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
-
-![image](https://user-images.githubusercontent.com/80414593/197321061-f2df93b5-4af5-482a-8d27-0765dd1ddac7.png)
-
 
 ## :trophy:  Conclusion: <a name="conclusion"></a>
 
@@ -233,12 +232,12 @@ Fine-tuned classifier
 - tf.random.set_seed<a name="seed"></a> : [5678, 8753, 1947, 2012, 8289, 1238]
 
 ### Group member
-| Member        | % Contribution |         Name              | Main Responsibility |
-| :------------ |:--------------:| -------------------------:|--------------------:|
-| 6310422101    |       25%     | Thontanvarot Srisamruan    | Collect data, Fine-tune Mobilenet model       |
-| 6310422102    |       25%     | Tanita Jaipuang            | Collect data, Fine-tune VGG16 model           |
-| 6510400003    |       25%     | Phanuphong Siriphongwatana | Main coding, Fine-tune Resnet50v2 model       |
-| 6510400004    |       25%     | Unyawee Phanburananont     | Collect data, Support coding,  Document Report  |
+| Member        | % Contribution | Main Responsibility |
+| :------------ |:--------------:|--------------------:|
+| 6310422101    |       25%     | Collect data, Fine-tune Mobilenet model       |
+| 6310422102    |       25%     | Collect data, Fine-tune VGG16 model           |
+| 6510400003    |       25%    | Main coding, Fine-tune Resnet50v2 model       |
+| 6510400004    |       25%      | Collect data, Support coding,  Document Report  |
 
 
 ### About Project
