@@ -96,6 +96,13 @@ The data is ready to use, Now we will start pre-trained model part. We load the 
 
 
 ## Training and Fine-Tuning :crystal_ball:: <a name="finetuning"></a>
+
+### :label: Label of classes
+- `` Exotic shorthair : 0 ``
+- `` Scottish fold : 1 ``
+- `` American shorthair : 2 ``
+- `` British shorthair : 3 ``
+- 
 ### :mag_right:  Strategy Fine-tuning:
 Individually fine-tuning for each model for the best accuracy.
 
@@ -187,21 +194,18 @@ Fine-tuned classifier
 ```
 
 
+
+
+
 ## :triangular_flag_on_post: Result<a name="result"></a>
 Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
 
 *Note:* The results of the models to compare the performance were obtained by running the models with 6 different initial weight ([random seed](#seed)), Then show the result in the form of MEAN+-SD.
 
-
-### :label: Label of classes
-- `` Exotic shorthair : 0 ``
-- `` Scottish fold : 1 ``
-- `` American shorthair : 2 ``
-- `` British shorthair : 3 ``
+### :crossed_swords: 1. Compare Model: Base Model vs Fine-Tuned Model
 
 ### :dart: Resnet50v2 
 ![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
-
 
 ### :dart: MobileNetv3 
 ![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
@@ -211,7 +215,7 @@ Result of the fine-tuned 3 models will compare with base model of thier models.(
 
 
 
-### 	:crossed_swords:  Compare Model: Fine Tuned CNN Model vs Original Pre-Trained CNN Model
+### 	:crossed_swords: 2.  Compare Model: Original Pre-Trained CNN Model vs Fine Tuned Model
 :speech_balloon: *Original Pre-Trained CNN Model is the model that we load with IMAGENET weight and make predictions on our cat breed dataset.*
 
 We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
@@ -222,16 +226,29 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ### MobileNetv3
 ![image](https://user-images.githubusercontent.com/80414593/197328657-603822fa-6f85-45a0-a50e-772a0c8e6768.png)
 
-
 ### VGG16
 ![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
 
 
-## :page_facing_up:	 Discussion: <a name="discussion"></a>
 
+
+
+
+## :page_facing_up:	 Discussion: <a name="discussion"></a>
+### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 ![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
+- 
+
+### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine Tuned Model
+- 
 
 ## :trophy:  Conclusion: <a name="conclusion"></a>
+### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
+- 
+
+### 2. Original Pre-Trained CNN Model (with IMAGENET weight) vs Fine Tuned Model
+- 
+
 
 ## Reference: <a name="reference"></a>
 ### Data Source
