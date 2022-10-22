@@ -1,10 +1,10 @@
 # Cat-Breed-Images-Classification using Pre-Trained CNN Model :smiley_cat:
 ## README-File
-- ``Data_set`` : All images used for training in the model, are separated by cat breed folder.
+- ``data set`` : A folder that contains all images used for training in the model are separated by the cat's breeds folder.
 - ``resnet50v2_Final.ipynb`` : Final model after fine tuning the Reanet50v2 backbone.
 - ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine tuning the MobileNetv3 backbone. 
 - ``vgg16_Final.ipynb`` : Final model after fine tuning the VGG16 backbone. 
-- ``experiment`` : The results of all the fine-tuning experiments.*************************************
+- ``experiment.xlsx`` : The results of all the fine-tuning experiments.
 
 
 ## :cat2:  Table of Contents:
