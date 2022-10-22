@@ -173,18 +173,20 @@ When predicting from the original version we can see that MobileNetv3Small and V
 - VGG16 model the accuracy is not much better after fine-tuning and the training time is take so long because VGG16 is a sequential model.
 ---
 <!--- 2 --->
-![image](https://user-images.githubusercontent.com/80414593/197344969-ad8a2be2-ee35-4f4c-b3f6-50e02ef5f89e.png)
+![image](https://user-images.githubusercontent.com/80414593/197348987-0614e471-b311-4ba7-83c2-d57a1238eff1.png)
+
 - Resnet50v2 model has the highest accuracy gain compared to other models and has a higher percentage of standard deviation.
 - VGG16 model has a slightly decrease in accuracy.For the standard deviation VGG16 had the lowest increase compared to the other models.
 - All models after fine-tuned will have at least a 40% standard deviation increase.
 ---
 <!--- 3 --->
-![image](https://user-images.githubusercontent.com/80414593/197345510-a7fdb07e-debd-4f40-8592-1d2605d7dec9.png)
+![image](https://user-images.githubusercontent.com/80414593/197349019-7e779e7b-f603-401f-83a6-310bfb6efdcc.png)
 - The percentage increase of training time in Resnet50v2 is the lowest but training time of Resnet50v2 is the most swinging.
 - As for MobileNetv3Small, the training time is less swinging compared to the other two models.
 ---
 <!--- 4 --->
-![image](https://user-images.githubusercontent.com/80414593/197345904-3fe24f43-43a9-4aee-a1a7-1c0eb61c603a.png)
+![image](https://user-images.githubusercontent.com/80414593/197349112-41f8ce9c-af1a-44d4-8856-f88ae7627968.png)
+
 - Resnet50V2 has the most all parameters compared to others because ResNet50v2 has the most feature extractors. And when we connect to the classifier layer we get 70 million parameters. This is one of the reasons why the Resnet50V2 is the most accurate.
 
 - VGG16 has the most training time. But the parameters are less than Resnet50V2. Our assumptions about this may be due to a model architecture that slows training based on [Keras training tables](#kerastable).
