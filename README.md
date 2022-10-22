@@ -100,12 +100,6 @@ The data is ready to use, Now we will start pre-trained model part. We load the 
 
 
 ## Training and Fine-Tuning :crystal_ball:: <a name="finetuning"></a>
-### :label: Label of classes
-- `` Exotic shorthair : 0 ``
-- `` Scottish fold : 1 ``
-- `` American shorthair : 2 ``
-- `` British shorthair : 3 ``
-
 ### :mag_right:  Strategy Fine-tuning:
 Individually fine-tuning for each model for the best accuracy.
 
@@ -132,6 +126,12 @@ We compare models that we fine-tuned with their original models, give 4 input to
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
 Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*)
+### :label: Label of classes
+- `` Exotic shorthair : 0 ``
+- `` Scottish fold : 1 ``
+- `` American shorthair : 2 ``
+- `` British shorthair : 3 ``
+
 ### :dart: Resnet50v2 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
@@ -139,7 +139,7 @@ Hyperparameter's fine-tuned
 - `` Batch size`` : 256
 - `` Epoch`` : 50
 
-UnFreeze layer -> [176:189]
+UnFreeze 4 layers -> [186:189]
 ```
 - conv5_block3_3_conv 
 - conv5_block3_out 
@@ -157,46 +157,54 @@ Fine-tuned classifier
 ### :dart: Mobilenetv3 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
-- `` Learning Rate`` : 
-- `` Batch size`` : 
-- `` Epoch`` : 
+- `` Learning Rate`` : 0.001
+- `` Batch size`` : 256
+- `` Epoch`` : 50
 
-UnFreeze layer -> []
+UnFreeze 4 layers -> [25:28]
 ```
--  
--  
--  
--  
+-  expanded_conv_1/depthwise/pad
+-  expanded_conv_1/depthwise
+-  expanded_conv_1/depthwise/BatchNorm
+-  re_lu_4
 ```
+
 Fine-tuned classifier
 ```
 - Flatten
-- Dense 
-- Dropout 
+- Dense 256
+- Dropout 0.5
 - Dense 4
 ```
 
 ### :dart: VGG16 
 Hyperparameter's fine-tuned
 - `` Optimizer`` : Adam
-- `` Learning Rate`` : 
-- `` Batch size`` : 
-- `` Epoch`` : 
+- `` Learning Rate`` : 0.0001
+- `` Batch size`` : 128
+- `` Epoch`` : 50
 
-UnFreeze layer -> []
+UnFreeze 8 layers -> [11:18]
 ```
--  
--  
--  
--  
+-  block4_conv1
+-  block4_conv2 
+-  block4_conv3
+-  block4_pool
+-  block5_conv1
+-  block5_conv2
+-  block5_conv3
+-  block5_pool
 ```
+
 Fine-tuned classifier
 ```
 - Flatten
-- Dense 
-- Dropout 
+- Dense 256
+- Dropout 0.5
 - Dense 4
 ```
+
+![image](https://user-images.githubusercontent.com/80414593/197320252-eb6b6f1a-4c55-4f30-a5f5-cd06f6ca3a4a.png)
 
 
 
@@ -207,21 +215,31 @@ Fine-tuned classifier
 
 ## Reference: <a name="reference"></a>
 ### GPU
-GPU 0: Tesla T4 (UUID: GPU-0c0e16f8-6133-6dc4-d1b4-843e49281c9e)
+- GPU 0: Tesla T4 (UUID: GPU-0c0e16f8-6133-6dc4-d1b4-843e49281c9e)
 
 ### Library Version
-Python 3.7.15
-
-NumPy 1.21.6
-
-TensorFlow 2.9.2
-
-Sklearn 1.0.2
-
-Matplotlib 3.2.2
+- Python 3.7.15
+- NumPy 1.21.6
+- TensorFlow 2.9.2
+- Sklearn 1.0.2
+- Matplotlib 3.2.2
 
 ### Set Seed
-np.random.seed(1234)
+- np.random.seed(1234)
+- tf.random.set_seed : [5678, 8753, 1947, 2012, 8289, 1238]
 
-tf.random.set_seed : [5678, 8753, 1947, 2012, 8289, 1238]
+### Group member
+| Member        | % Contribution |         Name              | Main Responsibility |
+| :------------ |:--------------:| -------------------------:|--------------------:|
+| 6310422101    |       25%     | Thontanvarot Srisamruan    | Collect data, Fine-tune Mobilenet model       |
+| 6310422102    |       25%     | Tanita Jaipuang            | Collect data, Fine-tune VGG16 model           |
+| 6510400003    |       25%     | Phanuphong Siriphongwatana | Main coding, Fine-tune Resnet50v2 model       |
+| 6510400004    |       25%     | Unyawee Phanburananont     | Collect data, Support coding,  Document Report  |
 
+
+### About Project
+This project is a part of the
+
+- Subject: **DADS7202 Deep Learning :star:**
+- Course: **Data Analytics and Data Science (DADS)**
+- Institution: **National Institute of Development Administration (NIDA)**
