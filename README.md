@@ -170,8 +170,6 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 ![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
-![image](https://user-images.githubusercontent.com/80414593/197337010-f1c63d42-5676-48a5-9a2e-8b696f062b50.png)
-![image](https://user-images.githubusercontent.com/80414593/197337023-57ca1c50-afde-4843-bedd-7ee9f640a555.png)
 
 ![image](https://user-images.githubusercontent.com/80414593/197344270-1de47094-d125-48da-a068-55ebe397024d.png)
 - Resnet50v2 model and MobileNetv3 model have improved accuracy after fine-tuning and the training time is also increasing.
