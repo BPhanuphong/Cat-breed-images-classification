@@ -2,7 +2,7 @@
 ## README-File
 - ``data set`` : A folder that contains all images used for training in the model are separated by the cat's breeds folder.
 - ``resnet50v2_Final.ipynb`` : Final model after fine-tuning the Reanet50v2 backbone.
-- ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine-tuning the MobileNetv3 backbone. 
+- ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine-tuning the MobileNetv3Small backbone. 
 - ``vgg16_Final.ipynb`` : Final model after fine-tuning the VGG16 backbone. 
 - ``Final Result.xlsx`` : The results of all the fine-tuning experiments.
 
@@ -20,7 +20,7 @@
 
 ## :round_pushpin: Introduction: <a name="introduction"></a>
 - The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) by pre-trained CNN models. By, cat breed images consist of 4 classes of image prediction goals: **``American shorthair, British shorthair, Exotic shorthair and Scottish fold``**.
-- The pre-trained models we selected 3 CNN backbones **``(Resnet50, MobileNet, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
+- The pre-trained models we selected 3 CNN backbones **``(Resnet50v2, MobileNetv3Small, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
 
 ## :clipboard: Dataset Overview: <a name="dataset"></a>
 This data was collected via several websites by ourselves. Stored each class of images in a separate folder and all images are kept as jpeg format.
@@ -86,13 +86,13 @@ The total number of images after we augmented:
 ## Convolutional Neural Network BackBones :bone: : <a name="bb"></a>
 The data is ready to use, Now we will start pre-trained model part. We load the models with IMAGENET weight, **excluding** the latter part regarding the classifier because we will build the classifier part by ourselves to make a classifier fit with our cat dataset. 
 
-1. Resnet50 
-2. MobileNetv3 small
+1. Resnet50v2
+2. MobileNetv3Small
 3. VGG16
 
 ![image](https://user-images.githubusercontent.com/80414593/197187459-c813dfba-6fb6-4405-990e-2634d026933e.png)
 
-*Ref: https://keras.io/api/applications/*
+*Ref: https://keras.io/api/applications/* <a name="kerastable"></a>
 
 :stars: The image show detail of each pre-trained model, We selected all of the different sized models so that we can compare how each is, when applied to our dataset, whether or not the size of the model affects the accuracy. 
 
@@ -124,7 +124,7 @@ Classifier:
 ### Model Architecture after Fine-Tuning
 ![image](https://user-images.githubusercontent.com/80414593/197343049-a957fcee-2fec-4413-bf3b-ec4b1f98a848.png)
 
-### :dart: Compare hyperparameters of all models: Resnet50v2, MobileNetv3, VGG16
+### :dart: Compare hyperparameters of all models: Resnet50v2, MobileNetv3Small, VGG16
 ![image](https://user-images.githubusercontent.com/80414593/197344216-f7055e80-b93c-4813-bc7c-18d651eb5fbd.png)
 
 
@@ -139,7 +139,7 @@ The result of the fine-tuned 3 models will compare with the base model of their 
 
 ![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
 
-### :dart: MobileNetv3 
+### :dart: MobileNetv3Small 
 
 ![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
 
@@ -157,7 +157,7 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 ### :dart: Resnet50v2
 ![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
 
-### :dart: MobileNetv3
+### :dart: MobileNetv3Small
 ![image](https://user-images.githubusercontent.com/80414593/197328657-603822fa-6f85-45a0-a50e-772a0c8e6768.png)
 
 ### :dart: VGG16
@@ -175,7 +175,7 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 ---
 <!--- 1 --->
 ![image](https://user-images.githubusercontent.com/80414593/197344270-1de47094-d125-48da-a068-55ebe397024d.png)
-- Resnet50v2 model and MobileNetv3 model have improved accuracy after fine-tuning and the training time is also increasing.
+- Resnet50v2 model and MobileNetv3Small model have improved accuracy after fine-tuning and the training time is also increasing.
 - VGG16 model the accuracy is not much better after fine-tuning and the training time is take so long because VGG16 is a sequential model.
 ---
 <!--- 2 --->
@@ -187,13 +187,13 @@ We compare models that we fine-tuned with their original models, and give 4 inpu
 <!--- 3 --->
 ![image](https://user-images.githubusercontent.com/80414593/197345510-a7fdb07e-debd-4f40-8592-1d2605d7dec9.png)
 - The percentage increase of training time in Resnet50v2 is the lowest but training time of Resnet50v2 is the most swinging.
-- As for MobileNetv3, the training time is less swinging compared to the other two models.
+- As for MobileNetv3Small, the training time is less swinging compared to the other two models.
 ---
 <!--- 4 --->
 ![image](https://user-images.githubusercontent.com/80414593/197345904-3fe24f43-43a9-4aee-a1a7-1c0eb61c603a.png)
 - Resnet50V2 has the most all parameters compared to others because ResNet50v2 has the most feature extractors. And when we connect to the classifier layer we get 70 million parameters. This is one of the reasons why the Resnet50V2 is the most accurate.
 
-- VGG16 has the most training time. But the parameters are less than Resnet50V2. Our assumptions about this may be due to a model architecture that slows training based on Keras training tables.
+- VGG16 has the most training time. But the parameters are less than Resnet50V2. Our assumptions about this may be due to a model architecture that slows training based on [Keras training tables](#kerastable).
 
 ---
 <!--- 5 --->
@@ -260,7 +260,7 @@ Furthermore, due to the lowest proportion of feature extractor of VGG16 Model an
 ### Group Member
 | Member        | % Contribution | Main Responsibility |
 | :------------ |:--------------:|--------------------:|
-| 6310422101    |       25%     | Collect data, Fine-tune Mobilenet model       |
+| 6310422101    |       25%     | Collect data, Fine-tune MobileNetv3Small model       |
 | 6310422102    |       25%     | Collect data, Fine-tune VGG16 model           |
 | 6510400003    |       25%    | Main coding, Fine-tune Resnet50v2 model       |
 | 6510400004    |       25%      | Collect data, Support coding,  Document Report  |
