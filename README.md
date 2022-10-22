@@ -18,7 +18,7 @@
 
 ## :round_pushpin: Introduction: <a name="introduction"></a>
 - The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) by pre-trained CNN models. By, cat breed images consist of 4 classes of image prediction goals: **``American shorthair, British shorthair, Exotic shorthair and Scottish fold``**.
-- The pre-trained models we selected 3 CNN backbones **``(Resnet50, Mobilenet small, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
+- The pre-trained models we selected 3 CNN backbones **``(Resnet50, MobileNet, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
 
 ## :clipboard: Dataset Overview: <a name="dataset"></a>
 This data was collected via pinterest website. Stored each class of images in a separate folder and all images are kept as jpeg format.
@@ -121,7 +121,10 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ![image](https://user-images.githubusercontent.com/80414593/197201125-10d57379-19e2-4296-b771-123bd93af0f3.png)
 
 ## :triangular_flag_on_post: Result<a name="result"></a>
-Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*)
+Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
+
+*Note:* The results of the models to compare the performance were obtained by running the models with 6 different [random seed](#seed), Then show the result in the form of MEAN+-STD.
+
 ### :label: Label of classes
 - `` Exotic shorthair : 0 ``
 - `` Scottish fold : 1 ``
@@ -226,7 +229,7 @@ Fine-tuned classifier
 
 ### Set Seed
 - np.random.seed(1234)
-- tf.random.set_seed : [5678, 8753, 1947, 2012, 8289, 1238]
+- tf.random.set_seed<a name="seed"></a> : [5678, 8753, 1947, 2012, 8289, 1238]
 
 ### Group member
 | Member        | % Contribution |         Name              | Main Responsibility |
