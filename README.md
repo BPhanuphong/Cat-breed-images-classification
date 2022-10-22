@@ -21,7 +21,7 @@
 - The pre-trained models we selected 3 CNN backbones **``(Resnet50, MobileNet, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
 
 ## :clipboard: Dataset Overview: <a name="dataset"></a>
-This data was collected via pinterest website. Stored each class of images in a separate folder and all images are kept as jpeg format.
+This data was collected via several websites by ourselves. Stored each class of images in a separate folder and all images are kept as jpeg format.
 
 ![image](https://user-images.githubusercontent.com/80414593/196963734-1461e440-6c55-4321-9e2e-c528bb4be783.png)
 
