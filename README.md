@@ -167,7 +167,8 @@ When predicting from the original version we can see that MobileNetv3Small and V
 
 ---
 <!--- 1 --->
-![image](https://user-images.githubusercontent.com/80414593/197344270-1de47094-d125-48da-a068-55ebe397024d.png)
+![image](https://user-images.githubusercontent.com/80414593/197348839-c813b4c2-6f06-4bd0-a3f2-2b4ca5d9b0ee.png)
+
 - Resnet50v2 model and MobileNetv3Small model have improved accuracy after fine-tuning and the training time is also increasing.
 - VGG16 model the accuracy is not much better after fine-tuning and the training time is take so long because VGG16 is a sequential model.
 ---
