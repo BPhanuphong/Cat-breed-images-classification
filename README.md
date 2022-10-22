@@ -51,7 +51,7 @@ Sample image of each class:
 
 ### Prepare Data
 - `` Resize image shape`` -> 224, 224 
-- `` Data spliting`` -> Train 80%, Test 10%, Validation 10%
+- `` Data spliting (random split)`` -> Train 80%, Test 10%, Validation 10%
 
 <!--- We will fit model with train set and test set. For validation set is used to evaluate accuracy's model. --->
 
@@ -123,7 +123,8 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ## :triangular_flag_on_post: Result<a name="result"></a>
 Result of the fine-tuned 3 models will compare with base model of thier models.(*base model: Pre-trained model before fine-tuning*) 
 
-*Note:* The results of the models to compare the performance were obtained by running the models with 6 different [random seed](#seed), Then show the result in the form of MEAN+-STD.
+*Note:* The results of the models to compare the performance were obtained by running the models with 6 different initial weight ([random seed](#seed)), Then show the result in the form of MEAN+-SD.
+
 
 ### :label: Label of classes
 - `` Exotic shorthair : 0 ``
