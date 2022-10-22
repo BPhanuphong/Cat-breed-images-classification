@@ -4,7 +4,7 @@
 - ``resnet50v2_Final.ipynb`` : Final model after fine tuning the Reanet50v2 backbone.
 - ``mobilenetv3_small_V3_Final.ipynb`` : Final model after fine tuning the MobileNetv3 backbone. 
 - ``vgg16_Final.ipynb`` : Final model after fine tuning the VGG16 backbone. 
-- ``experiment.xlsx`` : The results of all the fine-tuning experiments.
+- ``Final Result.xlsx`` : The results of all the fine-tuning experiments.
 
 
 ## :cat2:  Table of Contents:
@@ -179,8 +179,8 @@ We compare models that we fine-tuned with their original models, give 4 input to
 ## :page_facing_up:	 Discussion: <a name="discussion"></a>
 ### 1. Base Model (Before fine-tuning) vs Fine-Tuned Model
 ![image](https://user-images.githubusercontent.com/80414593/197329332-ec350059-0de5-45ff-a430-bb65d87bd674.png)
-![image](https://user-images.githubusercontent.com/80414593/197336442-97408b54-df95-4453-9310-a117287ac179.png)
-![image](https://user-images.githubusercontent.com/80414593/197336458-648c31f9-c775-47d6-a6d4-ced6b53d44ef.png)
+![image](https://user-images.githubusercontent.com/80414593/197337010-f1c63d42-5676-48a5-9a2e-8b696f062b50.png)
+![image](https://user-images.githubusercontent.com/80414593/197337023-57ca1c50-afde-4843-bedd-7ee9f640a555.png)
 
 
 - ...
