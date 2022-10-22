@@ -122,78 +122,15 @@ Classifier:
 ### Model Architecture after Fine-Tuning
 ![image](https://user-images.githubusercontent.com/80414593/197326419-08cbaaa5-be8d-49bc-9365-777fc8044865.png)
 
-### Resnet50v2
-Hyperparameter's fine-tuned
-- `` Optimizer`` : Adam
-- `` Learning Rate`` : 0.0001
-- `` Batch size`` : 256
-- `` Epoch`` : 50
-
-UnFreeze 4 layers -> [186:189]
-```
-- conv5_block3_3_conv 
-- conv5_block3_out 
-- post_bn 
-- post_relu 
-```
-Fine-tuned classifier
-```
-- Flatten
-- Dense 512
-- Dropout 0.75
-- Dense 4
-```
-
-### MobileNetv3
-Hyperparameter's fine-tuned
-- `` Optimizer`` : Adam
-- `` Learning Rate`` : 0.001
-- `` Batch size`` : 256
-- `` Epoch`` : 50
-
-UnFreeze 4 layers -> [25:28]
-```
--  expanded_conv_1/depthwise/pad
--  expanded_conv_1/depthwise
--  expanded_conv_1/depthwise/BatchNorm
--  re_lu_4
-```
-
-Fine-tuned classifier
-```
-- Flatten
-- Dense 256
-- Dropout 0.5
-- Dense 4
-```
-### VGG16
-Hyperparameter's fine-tuned
-- `` Optimizer`` : Adam
-- `` Learning Rate`` : 0.0001
-- `` Batch size`` : 128
-- `` Epoch`` : 50
-
-UnFreeze 8 layers -> [11:18]
-```
--  block4_conv1
--  block4_conv2 
--  block4_conv3
--  block4_pool
--  block5_conv1
--  block5_conv2
--  block5_conv3
--  block5_pool
-```
-
-Fine-tuned classifier
-```
-- Flatten
-- Dense 256
-- Dropout 0.5
-- Dense 4
-```
+### :dart: Resnet50v2
+![image](https://user-images.githubusercontent.com/80414593/197335887-292728bf-6b14-4085-98fc-9e2220673c05.png)
 
 
+### :dart: MobileNetv3
+![image](https://user-images.githubusercontent.com/80414593/197335906-0c4ef8da-c943-44c8-8988-4e535af92bd9.png)
+
+### :dart: VGG16
+![image](https://user-images.githubusercontent.com/80414593/197335917-db9c180c-2e46-45d5-b1cb-c587c5b264df.png)
 
 
 
@@ -205,17 +142,14 @@ Result of the fine-tuned 3 models will compare with base model of thier models.(
 ### :crossed_swords: 1. Compare Model: Base Model vs Fine-Tuned Model
 
 ### :dart: Resnet50v2 
-![image](https://user-images.githubusercontent.com/80414593/197335887-292728bf-6b14-4085-98fc-9e2220673c05.png)
 
 ![image](https://user-images.githubusercontent.com/80414593/197329572-9cd8f4db-6f7d-46b8-8af5-ca289b881122.png)
 
 ### :dart: MobileNetv3 
-![image](https://user-images.githubusercontent.com/80414593/197335906-0c4ef8da-c943-44c8-8988-4e535af92bd9.png)
 
 ![image](https://user-images.githubusercontent.com/80414593/197329705-47d84813-7166-4124-be4a-b1680c200b22.png)
 
 ### :dart: VGG16 
-![image](https://user-images.githubusercontent.com/80414593/197335917-db9c180c-2e46-45d5-b1cb-c587c5b264df.png)
 
 ![image](https://user-images.githubusercontent.com/80414593/197329727-04c3a3b8-7a15-4137-9fc8-ddca1e462ccc.png)
 
@@ -226,13 +160,13 @@ Result of the fine-tuned 3 models will compare with base model of thier models.(
 
 We compare models that we fine-tuned with their original models, give 4 input to model (1 image of each classes). The figure below shows the probabilistic prediction results of the class below the image obtained from the original model and our fine-tuned model.
 
-### Resnet50v2
+### :dart: Resnet50v2
 ![image](https://user-images.githubusercontent.com/80414593/197326126-c869a0c5-a295-4b40-a8a4-7d0cbc22b10e.png)
 
-### MobileNetv3
+### :dart: MobileNetv3
 ![image](https://user-images.githubusercontent.com/80414593/197328657-603822fa-6f85-45a0-a50e-772a0c8e6768.png)
 
-### VGG16
+### :dart: VGG16
 ![image](https://user-images.githubusercontent.com/80414593/197326212-09054d38-1bea-43db-b615-e06dd312acf9.png)
 
 
