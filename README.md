@@ -19,7 +19,7 @@
 9. [Reference](#reference)
 
 ## :round_pushpin: Introduction: <a name="introduction"></a>
-- The purpose of this project is to train an image classification (single-label) with our custom dataset (Cat breed images) by pre-trained CNN models. By, cat breed images consist of 4 classes of image prediction goals: **``American shorthair, British shorthair, Exotic shorthair and Scottish fold``**.
+- The purpose of this project is to train an image classification (multiple-label) with our custom dataset (Cat breed images) by pre-trained CNN models. By, cat breed images consist of 4 classes of image prediction goals: **``American shorthair, British shorthair, Exotic shorthair and Scottish fold``**.
 - The pre-trained models we selected 3 CNN backbones **``(Resnet50v2, MobileNetv3Small, VGG16)``** to fine-tuning by adjusting hyperparameters, unfreeze layers and changing the classification layer of models with our custom dataset, After fine-tuned we compare 3 model with original pre-trined CNN models(no fine-tuning).
 
 ## :clipboard: Dataset Overview: <a name="dataset"></a>
