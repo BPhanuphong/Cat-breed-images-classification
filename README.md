@@ -267,9 +267,7 @@ Furthermore, due to the lowest proportion of feature extractor of the
 | 6510400003    |Phanuphong Siriphongwatana|       25%    | Main coding, Fine-tune Resnet50v2 model       |
 | 6510400004    |Unyawee Phanburananont|       25%      | Collect data, Support coding,  Document Report  |
 
-ผู้จัดทำ
-- 6510400004 
-- 6510400003 
+
 ### About Project
 This project is a part of the
 
