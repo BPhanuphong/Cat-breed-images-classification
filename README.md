@@ -260,14 +260,16 @@ Furthermore, due to the lowest proportion of feature extractor of the
 - tf.random.set_seed<a name="seed"></a> : [5678, 8753, 1947, 2012, 8289, 1238]
 
 ### Group Member
-| Member        | % Contribution | Main Responsibility |
-| :------------ |:--------------:|--------------------:|
-| 6310422101    |       25%     | Collect data, Fine-tune MobileNetv3Small model       |
-| 6310422102    |       25%     | Collect data, Fine-tune VGG16 model           |
-| 6510400003    |       25%    | Main coding, Fine-tune Resnet50v2 model       |
-| 6510400004    |       25%      | Collect data, Support coding,  Document Report  |
+| Member        | Name | % Contribution | Main Responsibility | 
+| :------------ |:--------------:|:--------------:|--------------------:|
+| 6310422101    | -  |       25%     | Collect data, Fine-tune MobileNetv3Small model       |
+| 6310422102    | - |       25%     | Collect data, Fine-tune VGG16 model           |
+| 6510400003    |Phanuphong Siriphongwatana|       25%    | Main coding, Fine-tune Resnet50v2 model       |
+| 6510400004    |Unyawee Phanburananont|       25%      | Collect data, Support coding,  Document Report  |
 
-
+ผู้จัดทำ
+- 6510400004 
+- 6510400003 
 ### About Project
 This project is a part of the
 
